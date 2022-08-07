@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkeypox Worldwide Spread</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #map{
+            width: 100vw;
+            height: 100vh;
+        }
+        .mapboxgl-popup-content{
+            /* height: 100px; */
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id='map'></div>
+    
+</body>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+<script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script>
+<script src="/index1.js"></script>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1Ijoic2hpdmFtZ3JvdmVyMzYwIiwiYSI6ImNsNXlsZDNuczE0cXgzZG1hbjVtMzBpczYifQ.EjYRUTRkKIEmD7bq5bEhYQ';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v10',
+    zoom: 2,
+    center: [20, 30]
+  });
+</script>
+</html>
+
+<!-- something needs to be done with the repetetiions of cases in the same city because this creates multiple markers on the same location -->
